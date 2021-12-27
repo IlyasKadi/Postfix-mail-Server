@@ -49,9 +49,10 @@
 
 
 # Requirements
-• Linux,
-• Mysql,
-• Postfix,
+
+* Linux,
+* Mysql,
+* Postfix,
 
 # Part-I
 

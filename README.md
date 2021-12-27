@@ -67,17 +67,12 @@
 ## Test-the-configuration
 
 
-
-
-
-
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 Out Team - [AIT EL KADI Ilyas](https://github.com/IlyasKadi) - [AZIZ Oussama](https://github.com/ATAMAN0)
 
-Project Link: [https://github.com/IlyasKadi/Domain-Name-System-Protocol](https://github.com/IlyasKadi/Domain-Name-System-Protocol)
+Project Link: [https://github.com/IlyasKadi/Postfix-mail-Server](https://github.com/IlyasKadi/Postfix-mail-Server)
 
 <p align="right">(<a href="#top">back to top</a>)</p>

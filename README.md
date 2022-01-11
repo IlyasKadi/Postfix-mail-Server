@@ -82,9 +82,8 @@ Once Postfix installed, it will automatically start and creates a new /etc/postf
 </div>
 
 
-<div align="center">
-    <img src="![Postfix-conf0](https://user-images.githubusercontent.com/80456274/149037136-7393c375-f92a-4635-9367-97f6500b8c9f.png)">
-</div>
+![Postfix-conf0](https://user-images.githubusercontent.com/80456274/149037136-7393c375-f92a-4635-9367-97f6500b8c9f.png)
+
 ## Checking-the-repository-and-identification-of-the-configuration-files
 ### role-of-main-cf
 ### role-of-master-cf

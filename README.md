@@ -91,6 +91,15 @@ sudo systemctl status postfix
 ### role-of-main-cf
 ### role-of-master-cf
 ## Installation-of-the-couriers-pop-and-imap
+
+```sh
+sudo apt-get install couriers-pop
+```
+
+```sh
+sudo apt-get install couriers-imap
+```
+
 ## creation-of-the-database
 ## Create-of-the-user
 ## Test-the-configuration

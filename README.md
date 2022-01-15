@@ -65,11 +65,13 @@ sudo apt-get install postfix
 
 During installation, you will be asked to choose the type of mail configuration, choose “Internet Site”.
 
+> We can select the No configuration option if we want to keep the default Postfix settings. The Internet site allows us to send and receive emails using SMTP. Therefore, we select the second option as shown in the following screenshot.
+
 <div align="center">
     <img src="images/Postfix-conf0.png">
 </div>
 
-Now enter the fully qualified domain name that you want to use for send and receive emails.
+Now enter the fully qualified domain name that you want to use for send and receive emails. In our case, it is `ataman.me`.
 
 <div align="center">
     <img src="images/Postfix-conf1.png">

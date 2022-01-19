@@ -118,11 +118,37 @@ mysql
 We have already create a database (mailserver) with the tables
 ![mailserver_db_shown](https://user-images.githubusercontent.com/80456274/150167331-bc445417-905d-4f2e-b828-7f4e8749a9ac.jpg)
 
-Now we will connect to the (mailserver) DB, and those are the tabke created :
+Now we will connect to the (mailserver) DB, and those are the table created :
 ![mailserver_tables](https://user-images.githubusercontent.com/80456274/150167605-9134e7fe-9c74-4885-8010-ae103e11ca8b.jpg)
 
 ### Creation-of-the-users
-![Uploading mariadb.jpg…]()
+This is the code for the table of the users
+```mysql
+### Table Virtual Users
+CREATE TABLE virtual_Users (
+	domain_name VARCHAR(100) not null,
+	email VARCHAR(100) NOT NULL,
+	password VARCHAR(106) NOT NULL,
+	fullname VARCHAR(50) NOT NULL,
+	department VARCHAR(50) NOT NULL,
+	status_id INT NOT NULL DEFAULT 1,
+PRIMARY KEY (email),
+FOREIGN KEY (domain_name) REFERENCES virtual_Domains(domain_name) ON DELETE CASCADE,
+FOREIGN KEY (status_id) REFERENCES virtual_Status(status_id) ON DELETE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+Then we will ad two users: oussama & ilyas, and for the password it is encrypted with a Secure Hash Algorithm : SHA2.
+> UNHEX() function performs the opposite operation of HEX() wich returns a string representation of a hexadecimal value of a decimal or string value specified as an argument.
+> Base64 encoding schemes are commonly used when there is a need to encode binary data that needs be stored and transferred over media that are designed to deal with textual data.
+
+```mysql
+INSERT INTO virtual_Users (domain_name,email,password,fullname,department) VALUES ('hvthang.xyz','test1@hvthang.xyz',TO_BASE64(UNHEX(SHA2('test1', 512))),'Test 1','Test');
+
+INSERT INTO virtual_Users (domain_name,email,password,fullname,department) VALUES ('hvthang.xyz','test2@hvthang.xyz',TO_BASE64(UNHEX(SHA2('test2', 512))),'Test 2','Test');
+
+```
+
+
 
 ## Installation-of-dovecot-pop-imap
 

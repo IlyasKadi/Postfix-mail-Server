@@ -116,15 +116,16 @@ mysql
 ![mariadb](https://user-images.githubusercontent.com/80456274/150166446-91370d8f-1637-4bbd-a3e2-414ec34ec109.jpg)
 
 We have already create a database (mailserver) with the tables
+
 ![mailserver_db_shown](https://user-images.githubusercontent.com/80456274/150167331-bc445417-905d-4f2e-b828-7f4e8749a9ac.jpg)
 
 Now we will connect to the (mailserver) DB, and those are the table created :
+
 ![mailserver_tables](https://user-images.githubusercontent.com/80456274/150167605-9134e7fe-9c74-4885-8010-ae103e11ca8b.jpg)
 
 ### Creation-of-the-users
 This is the code for the table of the users
 ```mysql
-### Table Virtual Users
 CREATE TABLE virtual_Users (
 	domain_name VARCHAR(100) not null,
 	email VARCHAR(100) NOT NULL,

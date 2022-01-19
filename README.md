@@ -92,7 +92,7 @@ sudo systemctl status postfix
 ### role-of-main-cf
 ### role-of-master-cf
 
-## creation-of-the-database
+## Creation-of-the-database
 ## Creation-of-the-users
 ## Installation-of-dovecot-pop-imap
 

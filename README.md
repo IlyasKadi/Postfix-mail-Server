@@ -139,8 +139,6 @@ FOREIGN KEY (status_id) REFERENCES virtual_Status(status_id) ON DELETE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 Then we will ad two users: oussama & ilyas, and for the password it is encrypted with a Secure Hash Algorithm : SHA2.
-> UNHEX() function performs the opposite operation of HEX() wich returns a string representation of a hexadecimal value of a decimal or string value specified as an argument.
-> Base64 encoding schemes are commonly used when there is a need to encode binary data that needs be stored and transferred over media that are designed to deal with textual data.
 
 ```mysql
 INSERT INTO virtual_Users (domain_name,email,password,fullname,department) VALUES ('hvthang.xyz','test1@hvthang.xyz',TO_BASE64(UNHEX(SHA2('test1', 512))),'Test 1','Test');
@@ -148,7 +146,9 @@ INSERT INTO virtual_Users (domain_name,email,password,fullname,department) VALUE
 INSERT INTO virtual_Users (domain_name,email,password,fullname,department) VALUES ('hvthang.xyz','test2@hvthang.xyz',TO_BASE64(UNHEX(SHA2('test2', 512))),'Test 2','Test');
 
 ```
+> UNHEX() function performs the opposite operation of HEX() wich returns a string representation of a hexadecimal value of a decimal or string value specified as an argument.
 
+> Base64 encoding schemes are commonly used when there is a need to encode binary data that needs be stored and transferred over media that are designed to deal with textual data.
 
 
 ## Installation-of-dovecot-pop-imap

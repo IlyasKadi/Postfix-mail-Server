@@ -100,7 +100,7 @@ This is the architecture of the data base that we will create :
 ![DBdesugn](https://user-images.githubusercontent.com/80456274/150172608-f8937c1c-e87b-49c9-afd4-5f2a9a6b0b16.jpg)
 
 
-Let's first restart mysqlserver (if it exists of course otherwise a installation is required).
+Let's first restart mysqlserver (if it exists of course otherwise an installation is required).
 ```sh
 sudo apt-get install mysql-server 
 ```
@@ -120,7 +120,7 @@ mysql
 ```
 ![mariadb](https://user-images.githubusercontent.com/80456274/150166446-91370d8f-1637-4bbd-a3e2-414ec34ec109.jpg)
 
-We have already create a database (mailserver) with the tables
+We have already create the database (mailserver) :
 
 ![mailserver_db_shown](https://user-images.githubusercontent.com/80456274/150167331-bc445417-905d-4f2e-b828-7f4e8749a9ac.jpg)
 

@@ -162,7 +162,7 @@ Users_table :
 
 
 ## Installation-of-dovecot-pop-imap
-To install Dovecot and its modules
+To install Dovecot and its modules :
 
 ```sh
 apt install dovecot-core dovecot-imapd dovecot-pop3 dovecot-lmtpd dovecot-mysql-y

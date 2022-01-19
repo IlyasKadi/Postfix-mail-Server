@@ -151,6 +151,11 @@ INSERT INTO virtual_Users (domain_name,email,password,fullname,department) VALUE
 > Base64 encoding schemes are commonly used when there is a need to encode binary data that needs be stored and transferred over media that are designed to deal with textual data.
 
 
+Users_table :
+
+![users_table](https://user-images.githubusercontent.com/80456274/150171859-fd61bfc7-b602-414b-8378-2ee2bbfbf094.jpg)
+
+
 ## Installation-of-dovecot-pop-imap
 
 ## Test-the-configuration

@@ -70,15 +70,11 @@ During installation, you will be asked to choose the type of mail configuration,
 
 > We can select the No configuration option if we want to keep the default Postfix settings. The Internet site allows us to send and receive emails using SMTP. Therefore, we select the second option as shown in the following screenshot.
 
-<div align="center">
-    <img src="images/Postfix-conf0.png">
-</div>
+![postfix__i](https://user-images.githubusercontent.com/80456274/150162090-bfe1d679-b597-4cf8-8a30-a896a10a0a10.png)
 
 Now enter the fully qualified domain name that you want to use for send and receive emails. In our case, it is `ataman.me`.
 
-<div align="center">
-    <img src="images/Postfix-conf1.png">
-</div>
+![post_ataman](https://user-images.githubusercontent.com/80456274/150162162-80efceba-b930-4c34-a868-acfc899c2095.png)
 
 Once Postfix installed, it will automatically start and creates a new /etc/postfix/main.cf file. You can verify the status of the service using the following commands.
 
@@ -86,9 +82,8 @@ Once Postfix installed, it will automatically start and creates a new /etc/postf
 sudo systemctl status postfix
 ```
 
-<div align="center">
-    <img src="images/Postfix-status.png">
-</div>
+![postfix_status](https://user-images.githubusercontent.com/80456274/150162115-56e1d88f-051b-4081-9447-c5ac8d29bf2d.jpg)
+
 
 
 

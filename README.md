@@ -162,8 +162,77 @@ Users_table :
 
 
 ## Installation-of-dovecot-pop-imap
+To install Dovecot and its modules
 
+```sh
+apt install dovecot-core dovecot-imapd dovecot-pop3 dovecot-lmtpd dovecot-mysql-y
+```
+
+```sh
+systemctl start dovecot
+```
+
+```sh
+systemctl status dovecot
+```
+
+![dovecot_status](https://user-images.githubusercontent.com/80456274/150186592-91c8fd6e-377f-4824-b73a-e083d0b716fc.jpg)
+
+Now for the configuration of Dovecot server :
+```sh
+cd /etc/dovecot
+ls
+```
+
+![etc_dov_ls](https://user-images.githubusercontent.com/80456274/150186934-1a55ce2b-bb0e-4401-b379-4d0ec1e28163.jpg)
+
+In the conf-file dovecot.conf:
+We will add the protocols imap pop3 lmtp (Local Mail Transfer Protocol (LMTP) is an alternative to (Extended) Simple Mail Transfer Protocol)
+```sh
+# Enable installed protocols
+!include_try /usr/share/dovecot/protocols.d/*.protocol
+protocols = imap pop3 lmtp
+```
+In the conf file dovecot-sql.conf.ext:
+We will add the driver and we will connect this file to the mailserver DB that we created before, and we will specify the password query and the format in which the password is stored in pssds database for the query:
+
+```sh
+driver = mysql
+connnect = host=127.0.0.1 dbname =mailserver user =mailuser password=2445
+password_query = SELECT email as user,  password FROM virtual_Users WHERE email='%u' and status_id=1;
+defaukt_pass_shceme = SHA512
+```
+> We wil add serveral settings to the dovecot conf files to link between all the configs together.
+
+Next we are going enable smpt for authenticated users and authentication to dovecot in the main_conf file of postfix server `main.cf` in `etc/postfix`
+
+```sh
+smtp_sasl_type = dovecot
+smtp_sasl_path = private/auth
+smtp_sasl_auth_enable = yes
+smtpd_sasl_auth_enable = yes
+broken_sasl_auth_clients = yes
+smtpd_sasl_authenticated_header = yes
+
+```
+We're almost there all we need is to restart the postfix and the dovcecot servers
+```sh
+systemctl restart dovecot
+systemctl restart postfix
+```
+And last but not least we make sure that ufw is disabled otherwise we aloow the port 25,110 and 145 for SMTP,POP and IMAP
 ## Test-the-configuration
+To test if everything is OK, we will use telnet to send a mail from one user to another:
+First we are going use SMTP to send a message :
+
+![telnet_25](https://user-images.githubusercontent.com/80456274/150193543-7460028b-a3fb-4373-973a-c46292b56800.jpg)
+
+First we are going use SMTP to send a message :
+Then we will use dovecot to login and check if the message is in the mailbox :
+
+![ehlo_ouss_to_ilyas](https://user-images.githubusercontent.com/80456274/150194389-571c49dd-32a3-4817-a8d6-a724c565447d.jpg)
+
+Everything is working just FIIIINE -__-
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

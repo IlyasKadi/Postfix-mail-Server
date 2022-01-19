@@ -89,10 +89,41 @@ sudo systemctl status postfix
 
 ## Checking-the-repository-and-identification-of-the-configuration-files
 ### role-of-main-cf
+![main_cf__1](https://user-images.githubusercontent.com/80456274/150164344-e0f2f147-48f5-4c98-a750-41eee7a9d4d3.jpg)
+
+
 ### role-of-master-cf
 
 ## Creation-of-the-database
+Let's first restart mysqlserver (if it exists of course otherwise a installation is required).
+```sh
+sudo apt-get install mysql-server 
+```
+```sh
+systemctl restart mysql
+```
+Checking the server
+```sh
+systemctl status mysql
+```
+
+![db_status](https://user-images.githubusercontent.com/80456274/150165111-8363e7f0-8037-4938-a72f-3155f4acd885.jpg)
+
+MYSQL server is ready
+```sh
+mysql
+```
+![mariadb](https://user-images.githubusercontent.com/80456274/150166446-91370d8f-1637-4bbd-a3e2-414ec34ec109.jpg)
+
+We have already create a database (mailserver) with the tables
+![mailserver_db_shown](https://user-images.githubusercontent.com/80456274/150167331-bc445417-905d-4f2e-b828-7f4e8749a9ac.jpg)
+
+Now we will connect to the (mailserver) DB, and those are the tabke created :
+![mailserver_tables](https://user-images.githubusercontent.com/80456274/150167605-9134e7fe-9c74-4885-8010-ae103e11ca8b.jpg)
+
 ### Creation-of-the-users
+![Uploading mariadb.jpg…]()
+
 ## Installation-of-dovecot-pop-imap
 
 ## Test-the-configuration

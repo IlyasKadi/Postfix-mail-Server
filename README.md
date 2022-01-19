@@ -26,13 +26,13 @@
                       <li><a href="#role-of-main-cf">Explain the role of the main.cf configuration file.</a></li>
                       <li><a href="#role-of-master-cf">Explain the role of the master.cf configuration file.</a></li> 
                   </ul>
-              <li><a href="#Creation-of-the-database">Create a database (in mysql database) which will correspond and interact with Postfix.</a></li>
+             <li><a href="#Creation-of-the-database">Create a database (in mysql database) which will correspond and interact with Postfix.</a></li>
                      <ul> 
-                                <li><a href="#Creation-of-the-users">Create users that will be associated with this database.</a></li>
-                  </ul>
+                          <li><a href="#Creation-of-the-users">Create users that will be associated with this database.</a></li>
+                     </ul>
              <li><a href="#Creation-of-the-users">Create users that will be associated with this database.</a></li>
-              <li><a href="#Installation-of-dovecot-pop-imap">Install the Dovecote (POP3/IMAP).</a></li>     
-              <li><a href="#Test-the-configuration">Test configuration with a mail client (telnet, thunderbird).</a></li>
+             <li><a href="#Installation-of-dovecot-pop-imap">Install the Dovecote (POP3/IMAP).</a></li>     
+             <li><a href="#Test-the-configuration">Test configuration with a mail client (telnet, thunderbird).</a></li>
            </ul>
         </li>    
    </ol>
@@ -97,7 +97,7 @@ sudo systemctl status postfix
 ### role-of-master-cf
 
 ## Creation-of-the-database
-## Creation-of-the-users
+### Creation-of-the-users
 ## Installation-of-dovecot-pop-imap
 
 ## Test-the-configuration

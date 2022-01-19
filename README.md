@@ -230,7 +230,7 @@ First we are going use SMTP to send a message :
 Then we will use dovecot to login and check if the message is in the mailbox :
 
 ![ehlo_ouss_to_ilyas](https://user-images.githubusercontent.com/80456274/150195615-6442376b-efc9-4710-aa31-7d990e4b1eb1.jpg)
-> retr 6.. number 6 is the 6th message sent ( yes there was 5 tests before :| )
+> retr 6.. number 6 is the 6th message sent ( yes they were 5 tests before :| )
 
 Everything is working just FIIIINE -__-
 

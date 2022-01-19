@@ -26,10 +26,9 @@
                       <li><a href="#role-of-main-cf">Explain the role of the main.cf configuration file.</a></li>
                       <li><a href="#role-of-master-cf">Explain the role of the master.cf configuration file.</a></li> 
                   </ul>
-              <li><a href="#Installation-of-dovecot-pop-imap">Install the Dovecote (POP3/IMAP).</a></li>    
-              <li><a href="#creation-of-the-database">Create a database (in mysql database) which will correspond and interact with Postfix.</a></li>
-              <li><a href="#Create-of-the-user">Create a user who will be associated with this database.</a></li>
-              <li><a href="#Test-the-configuration">Test configuration with a mail client (telnet, thunderbird, …).</a></li>
+              <li><a href="#creation-of-the-database">Create a database (in mysql database) which will correspond and interact with Postfix.</a></li>                                           <li><a href="#Creation-of-the-users">Create users that will be associated with this database.</a></li>
+              <li><a href="#Installation-of-dovecot-pop-imap">Install the Dovecote (POP3/IMAP).</a></li>     
+              <li><a href="#Test-the-configuration">Test configuration with a mail client (telnet, thunderbird).</a></li>
            </ul>
         </li>    
    </ol>
@@ -92,18 +91,11 @@ sudo systemctl status postfix
 ## Checking-the-repository-and-identification-of-the-configuration-files
 ### role-of-main-cf
 ### role-of-master-cf
-## Installation-of-dovecot-pop-imap
-
-```sh
-sudo apt-get install couriers-pop
-```
-
-```sh
-sudo apt-get install couriers-imap
-```
 
 ## creation-of-the-database
-## Create-of-the-user
+## Creation-of-the-users
+## Installation-of-dovecot-pop-imap
+
 ## Test-the-configuration
 
 

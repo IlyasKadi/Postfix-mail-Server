@@ -20,13 +20,13 @@
       <a href="#Part-I">Part I : Postfix configuration</a>
          <ul>
               <li><a href="#addition-the-mail-server-to-the-dns">Add a mail server to your DNS</a></li>       
-              <li><a href="#Installation-the-Postfix-server">Install the Postfix server</a></li>
+              <li><a href="#Installation-the-Postfix-server">Install the Postfix server(SMTP)</a></li>
               <li><a href="#Checking-the-repository-and-identification-of-the-configuration-files">Check the repository /etc/postfix and identify the configuration files.</a></li>
                   <ul> 
                       <li><a href="#role-of-main-cf">Explain the role of the main.cf configuration file.</a></li>
                       <li><a href="#role-of-master-cf">Explain the role of the master.cf configuration file.</a></li> 
                   </ul>
-              <li><a href="#Installation-of-the-couriers-pop-and-imap">Install the courier-pop and courier-imap.</a></li>    
+              <li><a href="#Installation-of-dovecot-pop-imap">Install the Dovecote (POP3/IMAP).</a></li>    
               <li><a href="#creation-of-the-database">Create a database (in mysql database) which will correspond and interact with Postfix.</a></li>
               <li><a href="#Create-of-the-user">Create a user who will be associated with this database.</a></li>
               <li><a href="#Test-the-configuration">Test configuration with a mail client (telnet, thunderbird, …).</a></li>
@@ -92,7 +92,7 @@ sudo systemctl status postfix
 ## Checking-the-repository-and-identification-of-the-configuration-files
 ### role-of-main-cf
 ### role-of-master-cf
-## Installation-of-the-couriers-pop-and-imap
+## Installation-of-dovecot-pop-imap
 
 ```sh
 sudo apt-get install couriers-pop

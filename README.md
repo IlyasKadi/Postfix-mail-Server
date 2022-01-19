@@ -122,7 +122,7 @@ mysql
 
 We have already create the database (mailserver) :
 
-![mailserver_db_shown](https://user-images.githubusercontent.com/80456274/150167331-bc445417-905d-4f2e-b828-7f4e8749a9ac.jpg)
+![mailserver_db_shown](https://user-images.githubusercontent.com/80456274/150197759-1f254bd8-ae30-4e4f-8826-b437e6b7d4c5.jpg)
 
 Now we will connect to the (mailserver) DB, and those are the table created :
 
@@ -184,7 +184,7 @@ cd /etc/dovecot
 ls
 ```
 
-![etc_dov_ls](https://user-images.githubusercontent.com/80456274/150186934-1a55ce2b-bb0e-4401-b379-4d0ec1e28163.jpg)
+![etc_dov_ls](https://user-images.githubusercontent.com/80456274/150197812-2ce079c3-b7ee-4a79-9e72-9d0955407b93.jpg)
 
 In the conf-file dovecot.conf:
 We will add the protocols imap pop3 lmtp (Local Mail Transfer Protocol (LMTP) is an alternative to (Extended) Simple Mail Transfer Protocol)
